@@ -27,7 +27,7 @@ router.get('/',checkAuth,(req,res,next)=>{
     });
 });
 router.get('/plastic_count',checkAuth,(req,res,next)=>{
-    const userId=req.body.userId;
+    const {userId}=req.body.userId;
     User.findOne({userId}).exec()
     .then(user=>{
         if(!user){

@@ -9,8 +9,8 @@ router.get('/menu', (req, res,next) => {
     .then(users=>{
         const productsInfo=users.map(product=>{
             return {
-                itemName:user.itemName,
-                price:user.cost
+                itemName:product.itemName,
+                price:product.cost
             }
         });
         res.status(200).json({
